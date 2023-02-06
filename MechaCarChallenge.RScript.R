@@ -1,9 +1,10 @@
+> #Challenge 1
 > #import dplyr
-  > library(dplyr)
-> 
-  > #read csv
-  > MechaCarData <- read.csv(file='Starter_Code/MechaCar_mpg.csv', check.names=F,stringsAsFactors = F)
-  > head(MechaCarData)
+> library(dplyr)
+
+> #read csv
+> MechaCarData <- read.csv(file='Starter_Code/MechaCar_mpg.csv', check.names=F,stringsAsFactors = F)
+> head(MechaCarData)
   vehicle_length vehicle_weight spoiler_angle ground_clearance AWD      mpg
   1       14.69710       6407.946      48.78998         14.64098   1 49.04918
   2       12.53421       5182.081      90.00000         14.36668   1 36.76606
@@ -11,8 +12,8 @@
   4       13.42849       9419.671      55.93903         12.98936   1 18.94149
   5       15.44998       3772.667      26.12816         15.10396   1 63.82457
   6       14.45357       7286.595      30.58568         13.10695   0 48.54268
-  > # generate multiple linear regression model
-    > lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = MechaCarData) 
+> # generate multiple linear regression model
+> lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = MechaCarData) 
   
   Call:
     lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + 
@@ -22,7 +23,7 @@
     (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  ground_clearance               AWD  
   -1.040e+02         6.267e+00         1.245e-03         6.877e-02         3.546e+00        -3.411e+00  
   
-  > #get summary stats
+> #get summary stats
     > summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = MechaCarData)) 
   
   Call:
@@ -47,3 +48,32 @@
   Residual standard error: 8.774 on 44 degrees of freedom
   Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
   F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
+  
+> #Challenge 2
+> # read in Suspension_Coil.csv
+> Suspension_coil <- read.csv(file='Starter_Code/Suspension_Coil.csv', check.names=F,stringsAsFactors = F)
+> head(Suspension_coil)
+  VehicleID Manufacturing_Lot  PSI
+  1    V40858              Lot1 1499
+  2    V40607              Lot1 1500
+  3    V31443              Lot1 1500
+  4     V6004              Lot1 1500
+  5     V7000              Lot1 1501
+  6    V17344              Lot1 1501
+  
+> # total summary dataframe
+> total_summary <- Suspension_coil %>% summarise(Mean=mean(PSI), Median=median(PSI), Varience=var(PSI), SD=sd(PSI))
+  Mean     Median   Varience       SD
+  1498.78   1500     62.29356      7.892627
+  
+> # total lot_summary dataframe
+> lot_summary <- Suspension_coil %>% group_by(Manufacturing_Lot) %>% summarise(Mean=mean(PSI), Median=median(PSI), Varience=var(PSI), SD=sd(PSI))
+> head(lot_summary)
+  # A tibble: 3 × 5
+  Manufacturing_Lot  Mean Median Varience     SD
+  <chr>             <dbl>  <dbl>    <dbl>  <dbl>
+  1 Lot1              1500   1500     0.980  0.990
+  2 Lot2              1500.  1500     7.47   2.73 
+  3 Lot3              1496.  1498.    170.   13.0
+>
+    
