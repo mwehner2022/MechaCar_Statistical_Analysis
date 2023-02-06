@@ -35,6 +35,7 @@ In this model, the p-value= 5.35 e-11 which is less than the assumed significanc
 
 ## Summary Statistics on Suspension Coils
 AutosRus tested multiple production lots for suspension coil data. To determine if the manufacturing process was consistent across production lots the weight capacities of different suspension coils were tested. A summary statistics table was created for:
+
 Suspension coil’s PSI continuous variable across all manufacturing lots. See image below Total Summary:
 
 ![total_summary](images/total_summary.png)
@@ -44,6 +45,7 @@ PSI metrics for each lot: mean, median, variance, and standard deviation. See im
 ![lot_summary](images/lot_summary.png)
 
 Based on the Analysis the following question can be answered: 
+
 *The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?* In total, the manufacturing lots meet the design specification because the variance is 62.2 which is less than the maximum of 100 psi. However, when broken down by lots, only lot 1 and 2 meet the design specifications having a variance of 1 and 7.5 respectively. Lot 3 fails to meet the requirements with a variance of 170.
 
 
