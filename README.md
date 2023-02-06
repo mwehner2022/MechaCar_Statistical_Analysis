@@ -23,14 +23,14 @@ The MechaCar prototypes were produced with differing designs to identify ideal v
 
 ![lm](images/lm_function.png) ![summary](images/summary.png)
 
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset? The variables that are statistically unlikely to provide random amounts of variance to the model, meaning they have significant impact on mpg are the intercept itself(mpg), vehicle length, and ground clearance.
+*Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?* The variables that are statistically unlikely to provide random amounts of variance to the model, meaning they have significant impact on mpg are the intercept itself(mpg), vehicle length, and ground clearance.
 
-Is the slope of the linear model considered to be zero? Why or why not? To answer this question, it must be understood that the linear regression tests the following hypotheses:
-H0 : The slope of the linear model is zero, or m = 0
-Ha : The slope of the linear model is not zero, or m ≠ 0
+*Is the slope of the linear model considered to be zero? Why or why not?* To answer this question, it must be understood that the linear regression tests the following hypotheses:
+- H0 : The slope of the linear model is zero, or m = 0
+- Ha : The slope of the linear model is not zero, or m ≠ 0
 In this model, the p-value= 5.35 e-11 which is less than the assumed significance level of .05. Therefore, there is sufficient evidence to reject the null hypothesis, meaning that the slope of the linear model is not zero.
 
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not? The r squared represents how well the regression model approximates real-world data points. Typically, the r-squared value will range between 0 and 1.  It helps determine the probability or likelihood that a future data point will fit the model. In this case the r squared value is .71, so there is a  probability that 71% of future data points would fit the model. While it is effective at predicting points in our current dataset, there are a lack of significant variables suggesting the model is overfitting. This means it fails to predict future data correctly since it does not generalize. 
+*Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?* The r squared represents how well the regression model approximates real-world data points. Typically, the r-squared value will range between 0 and 1.  It helps determine the probability or likelihood that a future data point will fit the model. In this case the r squared value is .71, so there is a  probability that 71% of future data points would fit the model. While it is effective at predicting points in our current dataset, there are a lack of significant variables suggesting the model is overfitting. This means it fails to predict future data correctly since it does not generalize. 
 
 
 ## Summary Statistics on Suspension Coils
@@ -44,7 +44,7 @@ PSI metrics for each lot: mean, median, variance, and standard deviation. See im
 ![lot_summary](images/lot_summary.png)
 
 Based on the Analysis the following question can be answered: 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not? In total, the manufacturing lots meet the design specification because the variance is 62.2 which is less than the maximum of 100 psi. However, when broken down by lots, only lot 1 and 2 meet the design specifications having a variance of 1 and 7.5 respectively. Lot 3 fails to meet the requirements with a variance of 170.
+*The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?* In total, the manufacturing lots meet the design specification because the variance is 62.2 which is less than the maximum of 100 psi. However, when broken down by lots, only lot 1 and 2 meet the design specifications having a variance of 1 and 7.5 respectively. Lot 3 fails to meet the requirements with a variance of 170.
 
 
 ## T-Tests on Suspension Coils
@@ -76,18 +76,18 @@ For lot 3 there is sufficient evidence to reject the null and the two means are 
 
 An additional statistical study AutosRUs could perform to anticipate how it will compare to its competition is running an analysis that predicts the prototype’s safety rating by finding variables that have the highest significance/impact on safety. 
 
-In order to complete the study, AutosRUs would need to gather additional data on competitors with similar automobiles to the MetaCar prototype. Ideally this information would span multiple years. This would include the following metrics which will be used to predict the safely rating:
-Safety rating: Dependent Variable
-Manufacturer: Independent Variable
-Model: Independent Variable
-Class: Independent Variable
-Weight: Independent Variable
-Year: Independent Variable
-Horsepower: Independent Variable
-Cylinders: Independent Variable
+In order to complete the study, AutosRUs would need to gather additional data on competitors with similar automobiles to the MechaCar prototype. Ideally this information would span multiple years. This would include the following metrics which will be used to predict the safely rating:
+1. Safety rating: Dependent Variable
+2. Manufacturer: Independent Variable
+3. Model: Independent Variable
+4. Class: Independent Variable
+5. Weight: Independent Variable
+6. Year: Independent Variable
+7. Horsepower: Independent Variable
+8. Cylinders: Independent Variable
 
 Null hypothesis or alternative hypothesis:
-H0 : The slope of the linear model is zero, or m = 0 There is no relationship between the variables and the safety rating and the dependent variable is determined by random chance and error.
-Ha : The slope of the linear model is not zero, or m ≠ 0 There is a relationship between the variables and the safety rating
+- H0 : The slope of the linear model is zero, or m = 0 There is no relationship between the variables and the safety rating and the dependent variable is determined by random chance and error.
+- Ha : The slope of the linear model is not zero, or m ≠ 0 There is a relationship between the variables and the safety rating
 
 A multiple linear regression would be run because it asks if we can predict values for variable A using a linear model and values from variable B. It shows which variables are correlated and have an impact on the dependent variable. In this case. The goal is to predict the safety rating based on multiple variables and determine which ones are most important. 
